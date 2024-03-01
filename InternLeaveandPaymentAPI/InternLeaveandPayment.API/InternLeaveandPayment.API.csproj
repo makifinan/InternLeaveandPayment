@@ -8,4 +8,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Common\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InternLeaveandPayment.Business\InternLeaveandPayment.Business.csproj" />
+    <ProjectReference Include="..\InternLeaveandPayment.DataAccess\InternLeaveandPayment.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
