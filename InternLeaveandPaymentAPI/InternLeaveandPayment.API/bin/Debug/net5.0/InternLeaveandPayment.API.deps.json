@@ -1365,8 +1365,17 @@
           "InternLeaveandPayment.Business.dll": {}
         }
       },
+      "InternLeaveandPayment.Core/1.0.0": {
+        "runtime": {
+          "InternLeaveandPayment.Core.dll": {}
+        },
+        "compile": {
+          "InternLeaveandPayment.Core.dll": {}
+        }
+      },
       "InternLeaveandPayment.DataAccess/1.0.0": {
         "dependencies": {
+          "InternLeaveandPayment.Core": "1.0.0",
           "InternLeaveandPayment.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
@@ -3781,6 +3790,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "InternLeaveandPayment.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InternLeaveandPayment.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

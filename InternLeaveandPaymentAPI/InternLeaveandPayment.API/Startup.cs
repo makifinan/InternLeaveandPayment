@@ -1,4 +1,9 @@
+using InternLeaveandPayment.Business.Abstract;
+using InternLeaveandPayment.Business.Concrete;
+using InternLeaveandPayment.DataAccess.Abstract;
+using InternLeaveandPayment.DataAccess.Concrete;
 using InternLeaveandPayment.DataAccess.Connection;
+using InternLeaveandPayment.DataAccess.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +16,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace InternLeaveandPayment.API
@@ -27,8 +33,14 @@ namespace InternLeaveandPayment.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<InternDbContext>(options =>
+            services.AddDbContext<InterneeLeaveandPaymentDBContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("InternDBConnection")));
+            services.AddScoped<IInternDAL,InternDAL>();
+            services.AddScoped<IInternService,InternManager>();
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

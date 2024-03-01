@@ -1520,6 +1520,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "InternLeaveandPayment.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        }
+      },
       "InternLeaveandPayment.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5798,6 +5808,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "InternLeaveandPayment.Core/1.0.0": {
+      "type": "project",
+      "path": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj",
+      "msbuildProject": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj"
+    },
     "InternLeaveandPayment.Domain/1.0.0": {
       "type": "project",
       "path": "../InternLeaveandPayment.Domain/InternLeaveandPayment.Domain.csproj",
@@ -5806,6 +5821,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "InternLeaveandPayment.Core >= 1.0.0",
       "InternLeaveandPayment.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -5840,6 +5856,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Akif\\Desktop\\InternLeaveandPayment\\InternLeaveandPaymentAPI\\InternLeaveandPaymentAPI\\InternLeaveandPayment.Core\\InternLeaveandPayment.Core.csproj": {
+              "projectPath": "C:\\Users\\Akif\\Desktop\\InternLeaveandPayment\\InternLeaveandPaymentAPI\\InternLeaveandPaymentAPI\\InternLeaveandPayment.Core\\InternLeaveandPayment.Core.csproj"
+            },
             "C:\\Users\\Akif\\Desktop\\InternLeaveandPayment\\InternLeaveandPaymentAPI\\InternLeaveandPaymentAPI\\InternLeaveandPayment.Domain\\InternLeaveandPayment.Domain.csproj": {
               "projectPath": "C:\\Users\\Akif\\Desktop\\InternLeaveandPayment\\InternLeaveandPaymentAPI\\InternLeaveandPaymentAPI\\InternLeaveandPayment.Domain\\InternLeaveandPayment.Domain.csproj"
             }

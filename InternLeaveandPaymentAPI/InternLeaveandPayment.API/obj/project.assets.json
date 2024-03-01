@@ -1569,10 +1569,21 @@
           "bin/placeholder/InternLeaveandPayment.Business.dll": {}
         }
       },
+      "InternLeaveandPayment.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        }
+      },
       "InternLeaveandPayment.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "InternLeaveandPayment.Core": "1.0.0",
           "InternLeaveandPayment.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
@@ -5917,6 +5928,11 @@
       "type": "project",
       "path": "../InternLeaveandPayment.Business/InternLeaveandPayment.Business.csproj",
       "msbuildProject": "../InternLeaveandPayment.Business/InternLeaveandPayment.Business.csproj"
+    },
+    "InternLeaveandPayment.Core/1.0.0": {
+      "type": "project",
+      "path": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj",
+      "msbuildProject": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj"
     },
     "InternLeaveandPayment.DataAccess/1.0.0": {
       "type": "project",

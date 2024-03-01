@@ -1482,10 +1482,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "InternLeaveandPayment.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternLeaveandPayment.Core.dll": {}
+        }
+      },
       "InternLeaveandPayment.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "InternLeaveandPayment.Core": "1.0.0",
           "InternLeaveandPayment.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
@@ -5718,6 +5729,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "InternLeaveandPayment.Core/1.0.0": {
+      "type": "project",
+      "path": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj",
+      "msbuildProject": "../InternLeaveandPayment.Core/InternLeaveandPayment.Core.csproj"
     },
     "InternLeaveandPayment.DataAccess/1.0.0": {
       "type": "project",

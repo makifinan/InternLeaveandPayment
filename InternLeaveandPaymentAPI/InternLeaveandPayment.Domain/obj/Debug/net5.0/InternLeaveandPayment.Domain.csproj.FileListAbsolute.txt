@@ -9,3 +9,4 @@ C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeave
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Domain\obj\Debug\net5.0\InternLeaveandPayment.Domain.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Domain\obj\Debug\net5.0\ref\InternLeaveandPayment.Domain.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Domain\obj\Debug\net5.0\InternLeaveandPayment.Domain.pdb
+C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Domain\obj\Debug\net5.0\InternLeaveandPayment.Domain.csproj.AssemblyReference.cache
