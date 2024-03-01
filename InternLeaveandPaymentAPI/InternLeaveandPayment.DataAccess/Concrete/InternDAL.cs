@@ -2,6 +2,7 @@
 using InternLeaveandPayment.DataAccess.Abstract;
 using InternLeaveandPayment.DataAccess.Entities;
 using InternLeaveandPayment.Domain.DTOs.Intern;
+using InternLeaveandPayment.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,31 @@ namespace InternLeaveandPayment.DataAccess.Concrete
         {
             _context = context;
         }
+
+        public async Task<GeneralReturnType<Intern>> AddInternAsync(Intern intern)
+        {
+            GeneralReturnType<Intern> result = new GeneralReturnType<Intern>();
+            try
+            {
+                await _context.Interns.AddAsync(intern);
+                var response = await _context.SaveChangesAsync();
+                if (response==1)
+                {
+                    result.Datas = intern;
+                    result.StatusCode = 200;
+                    result.Message = "Kayıt Başarılı";
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Datas = null;
+                result.StatusCode = 400;
+                result.Message = "Ekleme işlemi yapılırken hata ile karşılaşıldı. Hata: "+ex;
+                
+            }
+            return result;
+        }
+
 
         public async Task<GeneralReturnType<List<InternListDTO>>> GetAllInternAsync()
         {

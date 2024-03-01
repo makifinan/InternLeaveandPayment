@@ -33,5 +33,16 @@ namespace InternLeaveandPayment.API.Controllers
             return Ok(result.Result);
         }
 
+        [HttpPost]
+        public IActionResult AddIntern(InternAddDTO internAddDTO)
+        {
+            var result = _internService.AddIntern(internAddDTO);
+            if (result.Result.Datas==null)
+            {
+                return BadRequest(result.Result.Message);
+            }
+            return Ok(result.Result);
+        }
+
     }
 }

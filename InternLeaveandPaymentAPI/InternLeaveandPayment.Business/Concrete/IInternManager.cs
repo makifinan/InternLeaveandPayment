@@ -1,7 +1,9 @@
 ﻿using InternLeaveandPayment.Business.Abstract;
+using InternLeaveandPayment.Business.Mapper;
 using InternLeaveandPayment.Core.Result;
 using InternLeaveandPayment.DataAccess.Abstract;
 using InternLeaveandPayment.Domain.DTOs.Intern;
+using InternLeaveandPayment.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,22 @@ namespace InternLeaveandPayment.Business.Concrete
     public class InternManager : IInternService
     {
         private readonly IInternDAL _internDAL;
-
+        MyMapper mapper = new MyMapper();
         public InternManager(IInternDAL internDAL)
         {
             _internDAL = internDAL;
+        }
+
+        public async Task<GeneralReturnType<InternAddDTO>> AddIntern(InternAddDTO internAddDTO)
+        {
+            GeneralReturnType<InternAddDTO> results = new GeneralReturnType<InternAddDTO>();
+
+            var result =  await _internDAL.AddInternAsync(mapper.Map<Intern,InternAddDTO>(internAddDTO));
+            results.Datas = mapper.Map<InternAddDTO, Intern>(result.Datas);
+            results.Message = result.Message;
+            results.StatusCode = result.StatusCode;
+
+            return results;
         }
 
         public async Task<GeneralReturnType<List<InternListDTO>>> GetAllIntern()

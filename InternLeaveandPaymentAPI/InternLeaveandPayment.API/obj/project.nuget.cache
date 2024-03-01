@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GlI4k7zMq4ivvPAIrq+LdFRIXGe5JR8hTPaRarEmG+DDC1asKN10XMPVCi85tlBw9JQ8JX96tyR2OjEwVNQ6MQ==",
+  "dgSpecHash": "BYjlKN1JCO8SQcVTQgqwO/QrsQSqj7caIgSiy1sP8OC8nuODkAK+E/MLheKZsglWKQG6gSD/l+YmyR2ufkyn7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Akif\\Desktop\\InternLeaveandPayment\\InternLeaveandPaymentAPI\\InternLeaveandPaymentAPI\\InternLeaveandPayment.API\\InternLeaveandPayment.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Akif\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Akif\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\Akif\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
@@ -69,7 +70,7 @@
     "C:\\Users\\Akif\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Akif\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Akif\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Akif\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
