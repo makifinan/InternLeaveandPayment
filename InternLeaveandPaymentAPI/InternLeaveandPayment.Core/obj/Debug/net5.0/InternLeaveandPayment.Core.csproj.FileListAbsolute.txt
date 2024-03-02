@@ -2,7 +2,6 @@ C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeave
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\bin\Debug\net5.0\InternLeaveandPayment.Core.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\bin\Debug\net5.0\ref\InternLeaveandPayment.Core.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\bin\Debug\net5.0\InternLeaveandPayment.Core.pdb
-C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.csproj.AssemblyReference.cache
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.AssemblyInfoInputs.cache
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeave
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\ref\InternLeaveandPayment.Core.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.pdb
+C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.Core\obj\Debug\net5.0\InternLeaveandPayment.Core.csproj.AssemblyReference.cache

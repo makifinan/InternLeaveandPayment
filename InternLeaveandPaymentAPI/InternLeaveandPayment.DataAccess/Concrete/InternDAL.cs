@@ -1,6 +1,7 @@
 ﻿using InternLeaveandPayment.Core.Result;
 using InternLeaveandPayment.DataAccess.Abstract;
-using InternLeaveandPayment.DataAccess.Entities;
+using InternLeaveandPayment.DataAccess.Connection;
+
 using InternLeaveandPayment.Domain.DTOs.Intern;
 using InternLeaveandPayment.Domain.Entities;
 using Microsoft.EntityFrameworkCore;

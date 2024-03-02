@@ -7,6 +7,11 @@ namespace InternLeaveandPayment.Domain.Entities
 {
     public partial class InternLeave
     {
+        public InternLeave()
+        {
+            InternLeaveDetails = new HashSet<InternLeaveDetail>();
+        }
+
         public int InternLeaveId { get; set; }
         public int? InternId { get; set; }
         public int? PermissionTypeId { get; set; }
@@ -20,5 +25,6 @@ namespace InternLeaveandPayment.Domain.Entities
         public virtual Intern Intern { get; set; }
         public virtual PermissionType PermissionType { get; set; }
         public virtual Statu Statu { get; set; }
+        public virtual ICollection<InternLeaveDetail> InternLeaveDetails { get; set; }
     }
 }

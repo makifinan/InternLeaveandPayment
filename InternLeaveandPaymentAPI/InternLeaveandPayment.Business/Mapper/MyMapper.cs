@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using InternLeaveandPayment.Domain.DTOs.Intern;
+using InternLeaveandPayment.Domain.DTOs.InternLeave;
+using InternLeaveandPayment.Domain.DTOs.InternLeaveDetail;
 using InternLeaveandPayment.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,8 @@ namespace InternLeaveandPayment.Business.Mapper
         public MyMapper()
         {
             CreateMap<InternAddDTO, Intern>().ReverseMap();
+            CreateMap<InternLeaveAddDTO, InternLeave>().ReverseMap();
+            CreateMap<InternLeaveDetailAddDTO, InternLeaveDetail>().ReverseMap();
             
 
             

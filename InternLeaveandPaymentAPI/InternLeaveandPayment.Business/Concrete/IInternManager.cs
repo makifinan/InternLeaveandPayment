@@ -24,7 +24,7 @@ namespace InternLeaveandPayment.Business.Concrete
         public async Task<GeneralReturnType<InternAddDTO>> AddIntern(InternAddDTO internAddDTO)
         {
             GeneralReturnType<InternAddDTO> results = new GeneralReturnType<InternAddDTO>();
-
+            
             var result =  await _internDAL.AddInternAsync(mapper.Map<Intern,InternAddDTO>(internAddDTO));
             results.Datas = mapper.Map<InternAddDTO, Intern>(result.Datas);
             results.Message = result.Message;

@@ -65,3 +65,4 @@ C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeave
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.API\bin\Debug\net5.0\InternLeaveandPayment.Core.dll
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.API\bin\Debug\net5.0\InternLeaveandPayment.Core.pdb
 C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Akif\Desktop\InternLeaveandPayment\InternLeaveandPaymentAPI\InternLeaveandPaymentAPI\InternLeaveandPayment.API\obj\Debug\net5.0\InternLeaveandPayment.API.MvcApplicationPartsAssemblyInfo.cs

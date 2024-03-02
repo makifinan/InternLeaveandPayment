@@ -16,6 +16,9 @@ namespace InternLeaveandPayment.Domain.Entities
         public int InternId { get; set; }
         public string InternName { get; set; }
         public string InternSurname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+
         public int? InternCompanyId { get; set; }
         public string InternSchool { get; set; }
         public string InternSchoolDepartment { get; set; }

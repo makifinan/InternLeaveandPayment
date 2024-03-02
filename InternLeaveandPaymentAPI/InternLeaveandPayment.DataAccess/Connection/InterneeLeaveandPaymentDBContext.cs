@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace InternLeaveandPayment.DataAccess.Entities
+namespace InternLeaveandPayment.DataAccess.Connection
 {
     public partial class InterneeLeaveandPaymentDBContext : DbContext
     {
@@ -23,18 +23,21 @@ namespace InternLeaveandPayment.DataAccess.Entities
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<DutyStation> DutyStations { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeScreen> EmployeeScreens { get; set; }
         public virtual DbSet<Intern> Interns { get; set; }
         public virtual DbSet<InternDay> InternDays { get; set; }
         public virtual DbSet<InternLeave> InternLeaves { get; set; }
+        public virtual DbSet<InternLeaveDetail> InternLeaveDetails { get; set; }
         public virtual DbSet<InternshipType> InternshipTypes { get; set; }
         public virtual DbSet<PermissionType> PermissionTypes { get; set; }
+        public virtual DbSet<Screeen> Screeens { get; set; }
         public virtual DbSet<Statu> Status { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("server=.;database=InterneeLeaveandPaymentDB;Trusted_Connection=true;TrustServerCertificate=True");
             }
         }
@@ -102,6 +105,27 @@ namespace InternLeaveandPayment.DataAccess.Entities
                 entity.Property(e => e.EmployeeSurname).HasMaxLength(100);
             });
 
+            modelBuilder.Entity<EmployeeScreen>(entity =>
+            {
+                entity.ToTable("EmployeeScreen");
+
+                entity.Property(e => e.EmployeeScreenId).HasColumnName("EmployeeScreenID");
+
+                entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
+
+                entity.Property(e => e.ScreenId).HasColumnName("ScreenID");
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.EmployeeScreens)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .HasConstraintName("FK_EmployeeScreen_Employee");
+
+                entity.HasOne(d => d.Screen)
+                    .WithMany(p => p.EmployeeScreens)
+                    .HasForeignKey(d => d.ScreenId)
+                    .HasConstraintName("FK_EmployeeScreen_Screeen");
+            });
+
             modelBuilder.Entity<Intern>(entity =>
             {
                 entity.ToTable("Intern");
@@ -147,6 +171,8 @@ namespace InternLeaveandPayment.DataAccess.Entities
                 entity.Property(e => e.InternTeacherPhone)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
+                entity.Property(e => e.IsActive).HasDefaultValueSql("((1))");
 
                 entity.HasOne(d => d.InternCompany)
                     .WithMany(p => p.Interns)
@@ -233,6 +259,32 @@ namespace InternLeaveandPayment.DataAccess.Entities
                     .HasConstraintName("FK_InternLeave_Statu");
             });
 
+            modelBuilder.Entity<InternLeaveDetail>(entity =>
+            {
+                entity.ToTable("InternLeaveDetail");
+
+                entity.Property(e => e.InternLeaveDetailId).HasColumnName("InternLeaveDetailID");
+
+                entity.Property(e => e.InternLeaveId).HasColumnName("InternLeaveID");
+
+                entity.Property(e => e.StatuId).HasColumnName("StatuID");
+
+                entity.HasOne(d => d.ApprovalPersonNavigation)
+                    .WithMany(p => p.InternLeaveDetails)
+                    .HasForeignKey(d => d.ApprovalPerson)
+                    .HasConstraintName("FK_InternLeaveDetail_Employee");
+
+                entity.HasOne(d => d.InternLeave)
+                    .WithMany(p => p.InternLeaveDetails)
+                    .HasForeignKey(d => d.InternLeaveId)
+                    .HasConstraintName("FK_InternLeaveDetail_InternLeave");
+
+                entity.HasOne(d => d.Statu)
+                    .WithMany(p => p.InternLeaveDetails)
+                    .HasForeignKey(d => d.StatuId)
+                    .HasConstraintName("FK_InternLeaveDetail_Statu");
+            });
+
             modelBuilder.Entity<InternshipType>(entity =>
             {
                 entity.ToTable("InternshipType");
@@ -255,6 +307,19 @@ namespace InternLeaveandPayment.DataAccess.Entities
                     .IsFixedLength(true);
 
                 entity.Property(e => e.PermissionTypeName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Screeen>(entity =>
+            {
+                entity.HasKey(e => e.ScreenId);
+
+                entity.ToTable("Screeen");
+
+                entity.Property(e => e.ScreenId).HasColumnName("ScreenID");
+
+                entity.Property(e => e.ScreenName)
                     .HasMaxLength(100)
                     .IsUnicode(false);
             });

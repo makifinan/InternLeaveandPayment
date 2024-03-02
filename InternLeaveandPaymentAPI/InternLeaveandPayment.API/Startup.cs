@@ -3,7 +3,7 @@ using InternLeaveandPayment.Business.Concrete;
 using InternLeaveandPayment.DataAccess.Abstract;
 using InternLeaveandPayment.DataAccess.Concrete;
 using InternLeaveandPayment.DataAccess.Connection;
-using InternLeaveandPayment.DataAccess.Entities;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +37,10 @@ namespace InternLeaveandPayment.API
         options.UseSqlServer(Configuration.GetConnectionString("InternDBConnection")));
             services.AddScoped<IInternDAL,InternDAL>();
             services.AddScoped<IInternService,InternManager>();
+            services.AddScoped<IInternLeaveDAL,InternLeaveDAL>();
+            services.AddScoped<IInternLeaveService,InternLeaveManager>();
+            services.AddScoped<IInternLeaveDetailDAL,InternLeaveDetailDAL>();
+            services.AddScoped<IInternLeaveDetailService,InternLeaveDetailManager>();
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
