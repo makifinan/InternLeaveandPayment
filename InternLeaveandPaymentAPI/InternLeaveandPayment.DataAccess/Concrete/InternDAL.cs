@@ -100,5 +100,25 @@ namespace InternLeaveandPayment.DataAccess.Concrete
             return result;
 
         }
+
+        public async Task<GeneralReturnType<Intern>> GetByEmailPassword(string email, string password)
+        {
+            GeneralReturnType<Intern> returns = new GeneralReturnType<Intern>();
+
+            var user = await _context.Interns.FirstOrDefaultAsync(intern=>intern.Email==email && intern.Password==password);
+            if (user==null)
+            {
+                returns.Datas = null;
+                returns.Message = "Kullanıcı bulunamadı";
+                returns.StatusCode = 400;
+            }
+            else
+            {
+                returns.Datas = user;
+                returns.Message = "Kullanıcı Bulundu";
+                returns.StatusCode = 400;
+            }
+            return returns;
+        }
     }
 }

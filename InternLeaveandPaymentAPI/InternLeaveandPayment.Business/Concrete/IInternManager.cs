@@ -38,5 +38,10 @@ namespace InternLeaveandPayment.Business.Concrete
             var result = await  _internDAL.GetAllInternAsync();
             return result;
         }
+
+        public async Task<GeneralReturnType<Intern>> GetByEmailPassword(string email, string password)
+        {
+            return await _internDAL.GetByEmailPassword(email,password);
+        }
     }
 }

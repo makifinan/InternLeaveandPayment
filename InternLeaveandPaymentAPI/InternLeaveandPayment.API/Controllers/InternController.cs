@@ -33,6 +33,20 @@ namespace InternLeaveandPayment.API.Controllers
             return Ok(result.Result);
         }
 
+
+        [HttpGet("GetByEmailPassword")]
+        public IActionResult GetByEmailPassword(string email, string password)
+        {
+            var result = _internService.GetByEmailPassword(email, password);
+            if (result.Result.Datas == null)
+            {
+                return NotFound(result.Result.Message);
+            }
+            return Ok(result.Result);
+        }
+
+
+
         [HttpPost]
         public IActionResult AddIntern(InternAddDTO internAddDTO)
         {
@@ -44,5 +58,6 @@ namespace InternLeaveandPayment.API.Controllers
             return Ok(result.Result);
         }
 
+        
     }
 }

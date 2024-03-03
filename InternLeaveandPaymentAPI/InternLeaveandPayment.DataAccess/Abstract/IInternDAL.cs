@@ -13,6 +13,7 @@ namespace InternLeaveandPayment.DataAccess.Abstract
     {
         Task<GeneralReturnType<List<InternListDTO>>> GetAllInternAsync();
         Task<GeneralReturnType<Intern>> AddInternAsync(Intern intern);
+        Task<GeneralReturnType<Intern>> GetByEmailPassword(string email,string password);
 
     }
 }

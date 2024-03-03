@@ -13,5 +13,6 @@ namespace InternLeaveandPayment.Business.Abstract
     {
         Task<GeneralReturnType<List<InternListDTO>>> GetAllIntern();
         Task<GeneralReturnType<InternAddDTO>> AddIntern(InternAddDTO internAddDTO);
+        Task<GeneralReturnType<Intern>> GetByEmailPassword(string email,string password);
     }
 }

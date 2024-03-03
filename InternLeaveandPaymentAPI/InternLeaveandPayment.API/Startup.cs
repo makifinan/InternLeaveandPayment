@@ -41,6 +41,8 @@ namespace InternLeaveandPayment.API
             services.AddScoped<IInternLeaveService,InternLeaveManager>();
             services.AddScoped<IInternLeaveDetailDAL,InternLeaveDetailDAL>();
             services.AddScoped<IInternLeaveDetailService,InternLeaveDetailManager>();
+            services.AddScoped<IEmployeeService,EmployeeManager>();
+            services.AddScoped<IEmployeeDAL,EmployeeDAL>();
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
