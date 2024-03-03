@@ -1,4 +1,5 @@
 ﻿using InternLeaveandPayment.Core.Result;
+using InternLeaveandPayment.Domain.DTOs.Employee;
 using InternLeaveandPayment.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace InternLeaveandPayment.Business.Abstract
 {
     public interface IEmployeeService
     {
-        Task<GeneralReturnType<Employee>> GetByEmailPassword(string email,string password);
+        Task<GeneralReturnType<EmployeeDetailDTO>> GetByEmailPassword(string email,string password);
     }
 }

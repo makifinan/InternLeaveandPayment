@@ -1,5 +1,6 @@
 ﻿using InternLeaveandPayment.API.Controllers.Common;
 using InternLeaveandPayment.Business.Abstract;
+using InternLeaveandPayment.Domain.DTOs.Employee;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,10 +21,10 @@ namespace InternLeaveandPayment.API.Controllers
             _employeeService = employeeService;
         }
 
-        [HttpGet]
-        public IActionResult GetByEmailPassword(string email,string password)
+        [HttpPost("~/api/GetByEmailPasswordEmployee")]
+        public IActionResult GetByEmailPassword(EmployeeLoginDTO employeeLoginDTO)
         {
-            var result = _employeeService.GetByEmailPassword(email,password);
+            var result = _employeeService.GetByEmailPassword(employeeLoginDTO.Email, employeeLoginDTO.Password);
             if (result.Result.Datas == null)
             {
                 return NotFound(result.Result.Message);

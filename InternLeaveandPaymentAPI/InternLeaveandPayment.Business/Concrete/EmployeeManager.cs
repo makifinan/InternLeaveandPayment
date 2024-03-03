@@ -1,6 +1,7 @@
 ﻿using InternLeaveandPayment.Business.Abstract;
 using InternLeaveandPayment.Core.Result;
 using InternLeaveandPayment.DataAccess.Abstract;
+using InternLeaveandPayment.Domain.DTOs.Employee;
 using InternLeaveandPayment.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace InternLeaveandPayment.Business.Concrete
             _employeeDAL = employeeDAL;
         }
 
-        public async Task<GeneralReturnType<Employee>> GetByEmailPassword(string email, string password)
+        public async Task<GeneralReturnType<EmployeeDetailDTO>> GetByEmailPassword(string email, string password)
         {
             return await _employeeDAL.GetByEmailPassword(email,password);
         }

@@ -34,10 +34,10 @@ namespace InternLeaveandPayment.API.Controllers
         }
 
 
-        [HttpGet("GetByEmailPassword")]
-        public IActionResult GetByEmailPassword(string email, string password)
+        [HttpPost("~/api/GetByEmailPassword")]
+        public IActionResult GetByEmailPassword(InternLoginDTO internLoginDTO)
         {
-            var result = _internService.GetByEmailPassword(email, password);
+            var result = _internService.GetByEmailPassword(internLoginDTO.Email, internLoginDTO.Password);
             if (result.Result.Datas == null)
             {
                 return NotFound(result.Result.Message);
