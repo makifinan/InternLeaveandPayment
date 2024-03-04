@@ -1,5 +1,5 @@
 ﻿using InternLeaveandPayment.Core.Result;
-using InternLeaveandPayment.Domain.DTOs.Employee;
+using InternLeaveandPayment.Domain.DTOs.Department;
 using InternLeaveandPayment.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace InternLeaveandPayment.DataAccess.Abstract
 {
-    public interface IEmployeeDAL
+    public interface IDepartmentDAL
     {
-        Task<GeneralReturnType<EmployeeDetailDTO>> GetByEmailPassword(string email, string password);
-        Task<GeneralReturnType<Employee>> GetByIDEmployee(int id);
+        GeneralReturnType<Department> GetAllDepartment(int id);
     }
 }

@@ -25,7 +25,7 @@ namespace InternLeaveandPayment.API.Controllers
             _internLeaveDetailService = internLeaveDetailService;
         }
 
-        [HttpPost]
+        [HttpPost("~/api/AddInternLeave")]
         public async Task<IActionResult> AddInternLeaveAsync(InternLeaveandDetailAddDTO internLeaveandDetailAddDTO)
         {
             var internLeaveID = await  _internLeaveService.AddInternLeaveAsync(internLeaveandDetailAddDTO.InternLeaveAddDTO);

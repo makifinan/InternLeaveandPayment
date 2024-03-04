@@ -55,7 +55,7 @@ namespace InternLeaveandPayment.DataAccess.Concrete
             {
                 var data = await (from intern in _context.Interns
                            join company in _context.Companies on intern.InternCompanyId equals company.CompanyId
-                           join employee in _context.Employees on intern.InternManagerId equals employee.EmployeeId
+                                  join employee in _context.Employees on intern.InternManagerId equals employee.EmployeeId 
                            join department in _context.Departments on intern.InternDepartmentId equals department.DepartmentId
                            join dutystation in _context.DutyStations on intern.InternDutyStationId equals dutystation.DutyStationId
                            join internshiptype in _context.InternshipTypes on intern.InternIntershipTypeId equals internshiptype.InternshipTypeId

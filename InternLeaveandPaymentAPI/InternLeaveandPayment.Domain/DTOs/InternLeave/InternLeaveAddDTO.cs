@@ -15,6 +15,7 @@ namespace InternLeaveandPayment.Domain.DTOs.InternLeave
         public DateTime? LeaveStartDate { get; set; }
         public DateTime? LeaveEndDate { get; set; }
         public string LeaveDescription { get; set; }
+        public int ResponsibleID { get; set; }
 
     }
 }

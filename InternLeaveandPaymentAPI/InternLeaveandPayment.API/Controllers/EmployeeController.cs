@@ -31,5 +31,16 @@ namespace InternLeaveandPayment.API.Controllers
             }
             return Ok(result.Result);
         }
+
+        [HttpPost("~/api/GetByIDEmployee/{id}")]
+        public IActionResult GetByIDEmployee(int id)
+        {
+            var result = _employeeService.GetByIDEmployee(id);
+            if (result.Result.Datas == null)
+            {
+                return NotFound(result.Result.Message);
+            }
+            return Ok(result.Result);
+        }
     }
 }

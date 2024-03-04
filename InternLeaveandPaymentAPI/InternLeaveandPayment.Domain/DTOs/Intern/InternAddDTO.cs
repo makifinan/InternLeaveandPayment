@@ -22,6 +22,8 @@ namespace InternLeaveandPayment.Domain.DTOs.Intern
         public string InternTeacherPhone { get; set; }
         public string InternContactPerson { get; set; }
         public string InternContactPhone { get; set; }
+        public string City { get; set; }
+
 
     }
 }

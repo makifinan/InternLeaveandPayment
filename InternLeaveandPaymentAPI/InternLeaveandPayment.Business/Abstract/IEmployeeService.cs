@@ -12,5 +12,6 @@ namespace InternLeaveandPayment.Business.Abstract
     public interface IEmployeeService
     {
         Task<GeneralReturnType<EmployeeDetailDTO>> GetByEmailPassword(string email,string password);
+        Task<GeneralReturnType<EmployeeDTO>> GetByIDEmployee(int id);
     }
 }

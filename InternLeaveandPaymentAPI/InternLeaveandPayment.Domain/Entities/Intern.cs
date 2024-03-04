@@ -33,6 +33,8 @@ namespace InternLeaveandPayment.Domain.Entities
         public string InternContactPersonPhone { get; set; }
         public DateTime? CreatedDate { get; set; }
         public bool? IsActive { get; set; }
+        public string City { get; set; }
+
 
         public virtual Company InternCompany { get; set; }
         public virtual Department InternDepartment { get; set; }

@@ -37,7 +37,7 @@ namespace InternLeaveandPayment.DataAccess.Concrete
                             DepartmentName = department.DepartmentName,
                             IsActive = employee.IsActive,
                         }).FirstOrDefault();
-            //var user = await _context.Employees.FirstOrDefaultAsync(intern => intern.Email == email && intern.Password == password);
+           
             if (user == null)
             {
                 returns.Datas = null;
@@ -53,6 +53,25 @@ namespace InternLeaveandPayment.DataAccess.Concrete
             return returns;
 
             
+        }
+
+        public async Task<GeneralReturnType<Employee>> GetByIDEmployee(int id)
+        {
+            GeneralReturnType<Employee> returns = new GeneralReturnType<Employee>();
+            var result = await _context.Employees.FirstOrDefaultAsync(e=>e.EmployeeId==id);
+            if (result==null)
+            {
+                returns.Datas = null;
+                returns.Message = "veri bulunamadı.";
+                returns.StatusCode = 400;
+            }
+            else
+            {
+                returns.Datas = result;
+                returns.Message = "Veri bulundu";
+                returns.StatusCode = 200;
+            }
+            return returns;
         }
     }
 }

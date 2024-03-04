@@ -21,6 +21,7 @@ namespace InternLeaveandPayment.Domain.Entities
         public string LeaveDescription { get; set; }
         public DateTime? CreatedDate { get; set; }
         public bool? IsActive { get; set; }
+        public int ResponsibleID { get; set; }
 
         public virtual Intern Intern { get; set; }
         public virtual PermissionType PermissionType { get; set; }

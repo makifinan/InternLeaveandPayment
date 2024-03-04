@@ -22,7 +22,7 @@ namespace InternLeaveandPayment.API.Controllers
             _internService = internService;
         }
 
-        [HttpGet]
+        [HttpGet("~/api/GetAllIntern")]
         public IActionResult GetAllIntern()
         {
             var result = _internService.GetAllIntern();
@@ -47,7 +47,7 @@ namespace InternLeaveandPayment.API.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("~/api/AddIntern")]
         public IActionResult AddIntern(InternAddDTO internAddDTO)
         {
             var result = _internService.AddIntern(internAddDTO);
